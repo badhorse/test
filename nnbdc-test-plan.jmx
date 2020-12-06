@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0 r1840935">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="core services Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath">/opt/apache-jmeter-5.0/lib/org.json.jar</stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Server-Side Stress Test" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time"></stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">5</stringProp>
+        <stringProp name="ThreadGroup.delay">1</stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        </CookieManager>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="protocol" elementType="Argument">
+              <stringProp name="Argument.name">protocol</stringProp>
+              <stringProp name="Argument.value">http</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="host" elementType="Argument">
+              <stringProp name="Argument.name">host</stringProp>
+              <stringProp name="Argument.value">192.168.0.201</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="port" elementType="Argument">
+              <stringProp name="Argument.name">port</stringProp>
+              <stringProp name="Argument.value">70</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="encoding" elementType="Argument">
+              <stringProp name="Argument.name">encoding</stringProp>
+              <stringProp name="Argument.value">UTF-8</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfLoginPlatform" elementType="Argument">
+              <stringProp name="Argument.name">uriOfLoginPlatform</stringProp>
+              <stringProp name="Argument.value">/uaa/login</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfLoginRcm" elementType="Argument">
+              <stringProp name="Argument.name">uriOfLoginRcm</stringProp>
+              <stringProp name="Argument.value">/rcm/serviceBean/getUserFunctionListFromDreams</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfGetEqpModels" elementType="Argument">
+              <stringProp name="Argument.name">uriOfGetEqpModels</stringProp>
+              <stringProp name="Argument.value">/rcm/serviceBean/getEqpModels</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfGetEqpIdsByEqpModel" elementType="Argument">
+              <stringProp name="Argument.name">uriOfGetEqpIdsByEqpModel</stringProp>
+              <stringProp name="Argument.value">/rcm/serviceBean/getEqpIdsByEqpModel</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfGetAllPPIDVersions" elementType="Argument">
+              <stringProp name="Argument.name">uriOfGetAllPPIDVersions</stringProp>
+              <stringProp name="Argument.value">/rcm/serviceBean/getAllPPIDVersions</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfGetActivePPIDVersions" elementType="Argument">
+              <stringProp name="Argument.name">uriOfGetActivePPIDVersions</stringProp>
+              <stringProp name="Argument.value">/rcm/serviceBean/getActivePPIDVersions</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfGetSomePPIDVersion" elementType="Argument">
+              <stringProp name="Argument.name">uriOfGetSomePPIDVersion</stringProp>
+              <stringProp name="Argument.value">/rcm/serviceBean/getSomePPIDVersion</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfGetParametersOfSomePPIDVersion" elementType="Argument">
+              <stringProp name="Argument.name">uriOfGetParametersOfSomePPIDVersion</stringProp>
+              <stringProp name="Argument.value">/rcm/serviceBean/getParametersOfSomePPIDVersion</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfGetPPIDsByEqpModelAndEqpId" elementType="Argument">
+              <stringProp name="Argument.name">uriOfGetPPIDsByEqpModelAndEqpId</stringProp>
+              <stringProp name="Argument.value">/rcm/serviceBean/getPPIDsByEqpModelAndEqpId</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfGetPPIDChangableStatus" elementType="Argument">
+              <stringProp name="Argument.name">uriOfGetPPIDChangableStatus</stringProp>
+              <stringProp name="Argument.value">/rcm/serviceBean/getPPIDChangableStatus</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfGetNewUploadPPIDFromEap" elementType="Argument">
+              <stringProp name="Argument.name">uriOfGetNewUploadPPIDFromEap</stringProp>
+              <stringProp name="Argument.value">/rcm/serviceBean/getNewUploadPPIDFromEap</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfGetModifyUploadPPIDFromEap" elementType="Argument">
+              <stringProp name="Argument.name">uriOfGetModifyUploadPPIDFromEap</stringProp>
+              <stringProp name="Argument.value">/rcm/serviceBean/getModifyUploadPPIDFromEap</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfGetPPIDsFromEapByCheckedEqpModelAndEqpId" elementType="Argument">
+              <stringProp name="Argument.name">uriOfGetPPIDsFromEapByCheckedEqpModelAndEqpId</stringProp>
+              <stringProp name="Argument.value">/rcm/serviceBean/getPPIDsFromEapByCheckedEqpModelAndEqpId</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfGetPPIDsFromRcmByCheckedEqpModelAndEqpId" elementType="Argument">
+              <stringProp name="Argument.name">uriOfGetPPIDsFromRcmByCheckedEqpModelAndEqpId</stringProp>
+              <stringProp name="Argument.value">/rcm/serviceBean/getPPIDsFromRcmByCheckedEqpModelAndEqpId</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfGetEqpModelsFromDreams" elementType="Argument">
+              <stringProp name="Argument.name">uriOfGetEqpModelsFromDreams</stringProp>
+              <stringProp name="Argument.value">/rcm/serviceBean/getEqpModelsFromDreams</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfGetEqpIdsFromDreasmAndCheckPPIDEnabledFlagByEqpModel" elementType="Argument">
+              <stringProp name="Argument.name">uriOfGetEqpIdsFromDreasmAndCheckPPIDEnabledFlagByEqpModel</stringProp>
+              <stringProp name="Argument.value">/rcm/serviceBean/getEqpIdsFromDreasmAndCheckPPIDEnabledFlagByEqpModel</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfNewUpload" elementType="Argument">
+              <stringProp name="Argument.name">uriOfNewUpload</stringProp>
+              <stringProp name="Argument.value">/rcm/ppid/newUpload</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfModifyUpload" elementType="Argument">
+              <stringProp name="Argument.name">uriOfModifyUpload</stringProp>
+              <stringProp name="Argument.value">/rcm/ppid/modifyUpload</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfUpdatePPIDParameters" elementType="Argument">
+              <stringProp name="Argument.name">uriOfUpdatePPIDParameters</stringProp>
+              <stringProp name="Argument.value">/rcm/ppid/parameter</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfComparePPID" elementType="Argument">
+              <stringProp name="Argument.name">uriOfComparePPID</stringProp>
+              <stringProp name="Argument.value">/rcm/ppid/comparison</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfChangePPIDStatus" elementType="Argument">
+              <stringProp name="Argument.name">uriOfChangePPIDStatus</stringProp>
+              <stringProp name="Argument.value">/rcm/ppid/status</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="uriOfEqpEnableDisable" elementType="Argument">
+              <stringProp name="Argument.name">uriOfEqpEnableDisable</stringProp>
+              <stringProp name="Argument.value">/rcm/eqp/enableDisable</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="txNameOfAllNewUploadPPID" elementType="Argument">
+              <stringProp name="Argument.name">txNameOfAllNewUploadPPID</stringProp>
+              <stringProp name="Argument.value">all new upload ppid</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="txNameOfParameterModifyUploadPPID" elementType="Argument">
+              <stringProp name="Argument.name">txNameOfParameterModifyUploadPPID</stringProp>
+              <stringProp name="Argument.value">parameter modify upload ppid</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="txNameOfParameterConfiguration" elementType="Argument">
+              <stringProp name="Argument.name">txNameOfParameterConfiguration</stringProp>
+              <stringProp name="Argument.value">parameter configuration</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="txNameOfComparison" elementType="Argument">
+              <stringProp name="Argument.name">txNameOfComparison</stringProp>
+              <stringProp name="Argument.value">comparison</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="txNameOfChangePPIDStatus" elementType="Argument">
+              <stringProp name="Argument.name">txNameOfChangePPIDStatus</stringProp>
+              <stringProp name="Argument.value">change ppid status</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="txNameOfEqpEnableDisable" elementType="Argument">
+              <stringProp name="Argument.name">txNameOfEqpEnableDisable</stringProp>
+              <stringProp name="Argument.value">eqp enable disable</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="txNameOfViewPPIDInformation" elementType="Argument">
+              <stringProp name="Argument.name">txNameOfViewPPIDInformation</stringProp>
+              <stringProp name="Argument.value">view ppid information</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="txNameOfViewActivePPIDInformation" elementType="Argument">
+              <stringProp name="Argument.name">txNameOfViewActivePPIDInformation</stringProp>
+              <stringProp name="Argument.value">view active ppid information</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller" enabled="true"/>
+        <hashTree>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Login" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Login User Data" enabled="true">
+              <stringProp name="filename">data/loginUserData.csv</stringProp>
+              <stringProp name="fileEncoding">UTF-8</stringProp>
+              <stringProp name="variableNames">username,password</stringProp>
+              <boolProp name="ignoreFirstLine">true</boolProp>
+              <stringProp name="delimiter">,</stringProp>
+              <boolProp name="quotedData">false</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="shareMode">shareMode.all</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="loginToUaa" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="username" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.value">${username}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">username</stringProp>
+                  </elementProp>
+                  <elementProp name="password" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.value">${password}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">password</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${host}</stringProp>
+              <stringProp name="HTTPSampler.port">${port}</stringProp>
+              <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/uaa/login</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+                <stringProp name="JSON_PATH">$.success</stringProp>
+                <stringProp name="EXPECTED_VALUE">true</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">true</boolProp>
+              </JSONPathAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller-bpm" enabled="true">
+          <boolProp name="LoopController.continue_forever">true</boolProp>
+          <stringProp name="LoopController.loops">100</stringProp>
+        </LoopController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getLoggedInUser" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${host}</stringProp>
+            <stringProp name="HTTPSampler.port">${port}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/security/users/getLoggedInUser</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+              <stringProp name="JSON_PATH">$.success</stringProp>
+              <stringProp name="EXPECTED_VALUE">true</stringProp>
+              <boolProp name="JSONVALIDATION">true</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
