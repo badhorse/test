@@ -1,0 +1,25 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1591841387434,298,Login,200,"Number of samples in transaction : 1, number of failing samples : 0",Server-Side Stress Test 1-1,,true,,613,245,1,1,null,0,104,0
+1591841387486,298,loginToUaa,200,,Server-Side Stress Test 1-1,text,true,,613,245,1,1,http://192.168.0.201:7000/uaa/login,296,0,37
+1591841387836,722,getLoggedInUser,200,,Server-Side Stress Test 1-1,text,true,,2476,1216,1,1,http://192.168.0.201:7000/security/users/getLoggedInUser,14,0,0
+1591841387836,14,getLoggedInUser-0,302,,Server-Side Stress Test 1-1,,true,,304,218,1,1,http://192.168.0.201:7000/security/users/getLoggedInUser,14,0,0
+1591841387852,14,getLoggedInUser-1,302,,Server-Side Stress Test 1-1,,true,,422,193,1,1,http://192.168.0.201:7000/login,14,0,0
+1591841387866,56,getLoggedInUser-2,302,,Server-Side Stress Test 1-1,,true,,368,369,1,1,http://192.168.0.201:7000/uaa/oauth/authorize?client_id=ZetaTech-Gateway&redirect_uri=http://192.168.0.201:7000/login&response_type=code&state=Coj2OU,56,0,0
+1591841387923,558,getLoggedInUser-3,302,,Server-Side Stress Test 1-1,,true,,417,218,1,1,http://192.168.0.201:7000/login?code=Vs53It&state=Coj2OU,558,0,0
+1591841388482,76,getLoggedInUser-4,200,,Server-Side Stress Test 1-1,text,true,,965,218,1,1,http://192.168.0.201:7000/security/users/getLoggedInUser,55,0,0
+1591841712431,267,Login,200,"Number of samples in transaction : 1, number of failing samples : 0",Server-Side Stress Test 1-1,,true,,613,245,1,1,null,0,110,0
+1591841712484,267,loginToUaa,200,,Server-Side Stress Test 1-1,text,true,,613,245,1,1,http://192.168.0.201:7000/uaa/login,265,0,33
+1591841712815,480,getLoggedInUser,200,,Server-Side Stress Test 1-1,text,true,,2476,1216,1,1,http://192.168.0.201:7000/security/users/getLoggedInUser,16,0,0
+1591841712815,16,getLoggedInUser-0,302,,Server-Side Stress Test 1-1,,true,,304,218,1,1,http://192.168.0.201:7000/security/users/getLoggedInUser,16,0,0
+1591841712833,20,getLoggedInUser-1,302,,Server-Side Stress Test 1-1,,true,,422,193,1,1,http://192.168.0.201:7000/login,20,0,0
+1591841712854,31,getLoggedInUser-2,302,,Server-Side Stress Test 1-1,,true,,368,369,1,1,http://192.168.0.201:7000/uaa/oauth/authorize?client_id=ZetaTech-Gateway&redirect_uri=http://192.168.0.201:7000/login&response_type=code&state=kZyFm7,31,0,0
+1591841712885,356,getLoggedInUser-3,302,,Server-Side Stress Test 1-1,,true,,417,218,1,1,http://192.168.0.201:7000/login?code=kiUC1L&state=kZyFm7,356,0,0
+1591841713241,54,getLoggedInUser-4,200,,Server-Side Stress Test 1-1,text,true,,965,218,1,1,http://192.168.0.201:7000/security/users/getLoggedInUser,54,0,0
+1591841878393,307,Login,200,"Number of samples in transaction : 1, number of failing samples : 0",Server-Side Stress Test 1-1,,true,,613,245,1,1,null,0,118,0
+1591841878447,307,loginToUaa,200,,Server-Side Stress Test 1-1,text,true,,613,245,1,1,http://192.168.0.201:7000/uaa/login,305,0,33
+1591841878827,725,getLoggedInUser,200,,Server-Side Stress Test 1-1,text,true,,2476,1216,1,1,http://192.168.0.201:7000/security/users/getLoggedInUser,34,0,0
+1591841878827,34,getLoggedInUser-0,302,,Server-Side Stress Test 1-1,,true,,304,218,1,1,http://192.168.0.201:7000/security/users/getLoggedInUser,34,0,0
+1591841878862,21,getLoggedInUser-1,302,,Server-Side Stress Test 1-1,,true,,422,193,1,1,http://192.168.0.201:7000/login,21,0,0
+1591841878884,33,getLoggedInUser-2,302,,Server-Side Stress Test 1-1,,true,,368,369,1,1,http://192.168.0.201:7000/uaa/oauth/authorize?client_id=ZetaTech-Gateway&redirect_uri=http://192.168.0.201:7000/login&response_type=code&state=PjBapj,33,0,0
+1591841878917,535,getLoggedInUser-3,302,,Server-Side Stress Test 1-1,,true,,417,218,1,1,http://192.168.0.201:7000/login?code=r5t8Qf&state=PjBapj,535,0,0
+1591841879453,99,getLoggedInUser-4,200,,Server-Side Stress Test 1-1,text,true,,965,218,1,1,http://192.168.0.201:7000/security/users/getLoggedInUser,90,0,0
